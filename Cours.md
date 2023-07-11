@@ -310,3 +310,95 @@ Pour aller plus loin :
 - elle doit prendre en parametre un tableau de String qui contient des adresses mail
 - la fonction de doit pas avoir connaissance du nom des fournisseurs
 - elle doit toujours afficher le pourcentage de fournisseurs de services mail, quel que soit le nombre de fournisseurs
+
+### Les chaines de caracteres
+
+Les chaines de caracteres sont des objets en java, elles sont donc soumises aux regles de la programmation orientee objet.
+
+```java
+String chaine = "une chaine de caracteres";
+```
+
+En memoire voici ce que ca donne :
+![Alt text](image-8.png)
+
+En general on a tendance a considerer les String comme des types primitifs, mais ce n'est pas le cas.
+En realite, lorsqu'on cree une string on cree une instance de la classe `String` qui contient un tableau de char.
+
+```java
+String chaine = new String("une chaine de caracteres");
+```
+
+Apres sa creation une chaine de caracteres ne peut plus etre modifiee. On dit qu'elle est `immutable`.
+
+```java
+\* cette instruction ne compile pas *\
+chaine = chaine + " et une autre chaine";
+```
+
+La classe String nous met a disposition de nombreux outils pour manupuler les chaines de caracteres.
+
+```java
+String chaine = "une chaine de caracteres";
+chaine.length(); // retourne la taille de la chaine
+chaine.charAt(0); // retourne le caractere a l'index 0
+chaine.substring(0, 4); // retourne la sous chaine de caracteres de l'index 0 a 4
+chaine.indexOf("chaine"); // retourne l'index de la premiere occurence de "chaine"
+chaine.replace("chaine", "string"); // remplace la premiere occurence de "chaine" par "string"
+chaine.toUpperCase(); // retourne la chaine en majuscule
+chaine.toLowerCase(); // retourne la chaine en minuscule
+chaine.trim(); // supprime les espaces en debut et fin de chaine
+chaine.split(" "); // retourne un tableau de String en decoupant la chaine a chaque espace
+chaine.equals("une chaine de caracteres"); // retourne true si les deux chaines sont identiques
+chaine.equalsIgnoreCase("UNE CHAINE DE CARACTERES"); // retourne true si les deux chaines sont identiques en ignorant la casse
+chaine.startsWith("une"); // retourne true si la chaine commence par "une"
+chaine.endsWith("res"); // retourne true si la chaine se termine par "res"
+```
+
+#### Comparer les chaines de caracteres
+
+En java il est impossible de comparer deux chaines de caracteres avec l'operateur `==`
+
+```java
+String chaine1 = "une chaine de caracteres";
+String chaine2 = "une chaine de caracteres";
+chaine1 == chaine2; // retourne false
+```
+
+Pour comparer deux chaines de caracteres il faut utiliser la methode `equals`
+
+```java
+String chaine1 = "une chaine de caracteres";
+String chaine2 = "une chaine de caracteres";
+chaine1.equals(chaine2); // retourne true
+```
+
+Cette fonction compare les chaines de caracteres caractere par caractere.
+
+La methode format permet de formater une chaine de caracteres en utilisant des marqueurs de position.
+
+```java
+boolen estVrai = true;
+int entier = 10;
+double decimal = 10.5;
+String chaine = "une chaine de caracteres";
+System.out.println("un booleen : %b, un entier : %d, un decimal : %f, une chaine : %s", estVrai, entier, decimal, chaine);
+```
+
+ou encore
+
+```java
+boolean b=true;
+String s="chaine";
+int i=56;
+double d=5.5;
+System.out.println(String.format("boolean : %b %n" +
+                 "chaine de caractères : %s %n" +
+                 "entier : %d %n" +
+                 "entier en hexadécimal : %x %n" +
+                 "entier en octal : %o %n" +
+                 "décimal : %f %n" +
+                 "décimal précis au dixième : %.1f %n" +
+                 "décimal au format scientifique : %e %n",
+                 b,s,i,i,i,d,d,d));
+```
