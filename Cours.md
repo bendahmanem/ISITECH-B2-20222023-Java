@@ -410,3 +410,72 @@ Générer trois nombres aléatoires compris entre 0 et 1000, puis vérifier si v
 Exercice 3 :
 
 Creez un juste prix en console avec un affichage du temps et du nombre de tentatives mises par l'utilisateur pour trouver le juste prix.
+
+### Les conversions
+
+En java il existe deux types de conversions :
+
+- les conversions implicites
+- les conversions explicites
+
+#### Les conversions implicites
+
+Les conversions implicites sont des conversions qui sont faites automatiquement par le compilateur.
+
+```java
+int entier = 10;
+double decimal = entier; // conversion implicite
+```
+
+#### Les conversions explicites
+
+Les conversions explicites sont des conversions qui sont faites par le programmeur.
+
+```java
+double decimal = 10.5;
+int entier = (int) decimal; // conversion explicite
+```
+
+La conversion entre types numeriques est possible si le type de destination est plus grand que le type source.
+
+```java
+int entier = 10;
+double decimal = entier; // conversion implicite
+```
+
+La conversion vers des chaines de caractères est possible pour tous les types.
+
+```java
+int entier = 10;
+String chaine = String.valueOf(entier); // conversion explicite
+```
+
+Dans certains cas il n'y a pas besoin d'utiliser une methode pour convertir un type en chaine de caracteres.
+
+```java
+int entier = 10;
+String chaine = "" + entier; // conversion implicite
+```
+
+Exercice 4 :
+
+Ecrire un programme qui demande à l’utilisateur de saisir un nombre entier et qui affiche sa valeur en binaire, octale et hexadécimale.
+
+La conversion depuis une chaine de caractères: la classe Integer
+
+La classe Integer permet de convertir une chaine de caractères en un entier.
+
+```java
+String chaine = "10";
+int entier = Integer.parseInt(chaine); // conversion explicite
+```
+
+L'inférence de type
+
+Depuis Java 10, il est possible de déclarer une variable sans préciser son type. Le compilateur va alors inférer le type de la variable en fonction de la valeur qui lui est affectée.
+
+```java
+var entier = 10;
+var decimal = 10.5;
+var chaine = "une chaine de caracteres";
+```
