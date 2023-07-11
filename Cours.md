@@ -303,4 +303,10 @@ Calculez le pourcentage de fournisseurs de services mail.
 Consultez la javadoc :
 
 - String : https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html
--
+
+Pour aller plus loin :
+
+- placer ce code dans une fonction
+- elle doit prendre en parametre un tableau de String qui contient des adresses mail
+- la fonction de doit pas avoir connaissance du nom des fournisseurs
+- elle doit toujours afficher le pourcentage de fournisseurs de services mail, quel que soit le nombre de fournisseurs
