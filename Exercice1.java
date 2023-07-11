@@ -19,8 +19,8 @@ public  class Exercice1
          adresses[5]="robert@orange.fr"; 
          adresses[6]="paul@sfr.fr"; 
          adresses[7]="lise@gmail.com"; 
-         adresses[8]="thierry@eni.fr"; 
-         adresses[9]="marie@eni.fr"; 
+         adresses[8]="thierry@isitech.fr"; 
+         adresses[9]="marie@isitech.fr"; 
          
          //RECUPERATION DES FOURNISSEURS DE CHAQUE ADRESSE
          listeBruteFournisseurs =new String[10]; 
