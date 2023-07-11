@@ -402,3 +402,11 @@ System.out.println(String.format("boolean : %b %n" +
                  "décimal au format scientifique : %e %n",
                  b,s,i,i,i,d,d,d));
 ```
+
+Exercice 2 :
+
+Générer trois nombres aléatoires compris entre 0 et 1000, puis vérifier si vous avez deux nombres pairs suivis par un nombre impair. Si ce n’est pas le cas, recommencer jusqu’à ce que vous ayez la combinaison pair, pair, impair. Afficher ensuite le nombre d’essais nécessaires pour obtenir cette combinaison.
+
+Exercice 3 :
+
+Creez un juste prix en console avec un affichage du temps et du nombre de tentatives mises par l'utilisateur pour trouver le juste prix.
