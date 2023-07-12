@@ -677,3 +677,21 @@ public class Personne {
     }
 }
 ```
+
+### Les packages
+
+Un package est un ensemble de classes regroupees dans un meme repertoire.
+
+Les packages permettent d'organiser les classes en categories.
+
+Les packages permettent de proteger les classes en les rendant privees.
+
+Les packages permettent de gerer les conflits de noms de classes.
+
+Les packages permettent de controler l'acces aux classes.
+
+Les packages permettent de creer des bibliotheques de classes.
+
+Les packages permettent de creer des classes qui ne sont pas visibles depuis l'exterieur.
+
+Les packages permettent de creer des classes qui ne sont visibles que depuis le package.
